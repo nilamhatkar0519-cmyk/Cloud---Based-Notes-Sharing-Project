@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cloud Based Notes Sharing System </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 main-container">
+                    
+                    <h1 class="main-heading"> Cloud Based Notes Sharing System </h1>
+                    <p class="main-para tagline"> Store, Share, & Access notes anytime, anywhere.</p>
+                    
+
+                    <div class="button-group">
+                        <button class="btn login" onclick="goToLogin()"> Login </button>
+                         <button class="btn Sign" onclick="goToSign()"> Sign in  </button>
+                    </div> 
+
+                    <div id="modal" class="modal">
+                        <div class="modal-content">
+                            <span class ="close" onclick="closeModal()">x</span>
+                            <h2 id="modelTitle"></h2>
+                            <input type="text" placeholder="User_Name">
+                            <input type="password" placeholder="Password">
+                            <button class=""btn submit> Submit </button>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+        </div>
+    </div>          
+    <script src="main.js"></script>
+
+    <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+    const firebaseConfig = {
+        apiKey: "YOUR_API_KEY",
+        authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+        projectId: "YOUR_PROJECT_ID",
+        appId: "APP_ID"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    onAuthStateChanged(auth, (user) => {
+        if (!user) {
+            // Not logged in → go back to login page
+            window.location.href = "index.html";
+        }
+    });
+</script>
+<script type="module">
+    import { getAuth, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+    const auth = getAuth();
+
+    window.logout = function () {
+        signOut(auth).then(() => {
+            window.location.href = "index.html";
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+.bg-container{
+    background-color: #f4f6f8;
+    background-size: cover;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container{
+    background: linear-gradient(to right, #e3f2fd, #ffffff) ;
+    font-family: "Arial, sans-serif";
+    padding: 30px;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.main-heading{
+    margin-bottom: 10px;
+}
+
+.main-para{
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.button-group{
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: transform 0.2s, background 0.3s;
+}
+.login{
+    background: #1976d2;
+    color: #ffffff;
+}
+.Sign{
+    background: #2e7d32;
+    color: #ffffff;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+}
+.modal-content{
+    background: #ffffff;
+    width: 300px;
+    margin: 120px auto;
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.modal-content input{
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+}
+.close{
+    float: right;
+    cursor:pointer;
+}
+
+.login-bg{
+    background-color: #ffffff;
+    align-items : center;
+    height: 100%;
+}
+
+
+.container{
+    background-color: #ffffff;
+    align-items: center;
+}
+.page-title{
+    margin-bottom: 20px;
+    background-color: #6a1b9a;
+}
+.login-card{
+    background : #ffffff;
+    width : 360px;
+    border-radius : 12px;
+}
+.card-header{
+    background-color: linear-gradient(135deg, #6a5acd, #b84ac9);
+    padding: 20px;
+    color: #ffffff;
+}
+
+.card-header h2 {
+    font-weight: 600;
+}
+.form{
+    padding: 25px;
+}
+.input-group{
+    margin-bottom: 15px;
+}
+.input-group input{
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    outline : none;
+    font-size: 14px;
+}
+.options{
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+.optins a{
+    text-decoration: none;
+    color: #6a5acd;
+}
+.login-btn{
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    background: linear-gradient( 135deg, #6a5acd, #b84ac9);
+    color: #ffffff;
+    font-size: 16px;
+    cursor  : pointer;
+}
+.login-btn:hover{
+    opacity: 0.9;
+}
+.signup-text{
+    margin-top: 15px;
+    font-size: 14px;
+}
+.signup-text a{
+    color: #6a5acd;
+    text-decoration: none;
+    font-weight: 600;
+}
