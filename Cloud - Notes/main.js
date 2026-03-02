@@ -1,6 +1,6 @@
 function goToLogin(){
     alert("Redirecting to Login Page")
-    window.location.href="login.html";
+    window.location.href="loginPage.html";
 }
 
 function goToSign(){
@@ -19,5 +19,8 @@ signInWithEmailAndPassword(auth, email, password)
     })
     .catch((error) => {
         alert(error.message);
-    })
+    }
+);
+
+
     
