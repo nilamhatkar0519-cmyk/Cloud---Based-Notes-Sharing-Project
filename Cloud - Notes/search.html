@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Search Notes | Cloud Notes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="upload-body">
+
+<nav class="navbar">
+<h2>☁ Cloud Notes</h2>
+
+<div class="nav-links">
+<a href="dashboard.html">Dashboard</a>
+<a href="loginPage.html">Logout</a>
+</div>
+</nav>
+
+<div class="upload-container">
+
+<h2>🔍 Search Notes</h2>
+
+<input type="text" id="searchInput" placeholder="Search by title or subject">
+
+<button onclick="searchNotes()">Search</button>
+
+<div id="results"></div>
+
+</div>
+
+<script type="module" src="search.js"></script>
+
+</body>
+</html>
